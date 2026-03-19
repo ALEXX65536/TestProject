@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Мини-приложение "Список задач"</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Мини-приложение "Список задач"</h1>
+
+    <div class="filters">
+      <input id="search" type="text" placeholder="Поиск..." />
+      
+      <select id="status">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="active">Not completed</option>
+      </select>
+    </div>
+
+    <p id="count"></p>
+
+    <div id="list"></div>
+  </div>
+
+  <div id="modal" class="modal-overlay hidden"></div>
+
+  <template id="todo-template">
+    <div class="card">
+      <h3></h3>
+      <p class="status"></p>
+      <p class="user-id"></p>
+    </div>
+  </template>
+
+  <template id="modal-template">
+    <div class="modal">
+      <h2 class="title"></h2>
+      <p class="status"></p>
+      <p class="id"></p>
+      <p class="user-id"></p>
+      <div class="user-info"></div>
+      <button class="close-btn">Close</button>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
